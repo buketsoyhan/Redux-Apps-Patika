@@ -1,14 +1,13 @@
 import {useState} from 'react'
 import {useDispatch} from "react-redux"; //useDispath redux altındaki reducer içindeki fonksiyonları kullanabilmek için kullanılır.
-import {addTodo} from "../redux/todos/todosSlice"
-import {nanoid} from "@reduxjs/toolkit"
+import {addTodoAsync} from "../redux/todos/todosSlice"
 function Form() {
     const [title, setTitle]=useState("")
     const dispatch =useDispatch();
-    const handleSubmit =(e)=>{
+    const handleSubmit = async(e)=>{
         if(!title) return;
         e.preventDefault();
-        dispatch(addTodo({id:nanoid() , title, completed:false}))
+        await dispatch(addTodoAsync({title}))
         setTitle("")
     }
     return (
