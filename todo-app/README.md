@@ -32,7 +32,7 @@ npm install -g surge
 command is run.
 Go to the folder with 
 ```bash
-npm install -g surge
+cd build
 ```
 ```bash
 surge
