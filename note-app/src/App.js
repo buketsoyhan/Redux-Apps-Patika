@@ -5,10 +5,14 @@ import NoteList from './components/NoteList';
 
 function App() {
   return (
-    <div className="App">
-      <Header />
-      <Form />
-      <NoteList />
+    <div className="container">
+      <div className='wrapper'>
+        <Header />
+        <br/>
+        <br/>
+        <Form />
+        <NoteList />
+      </div>
     </div>
   );
 }
