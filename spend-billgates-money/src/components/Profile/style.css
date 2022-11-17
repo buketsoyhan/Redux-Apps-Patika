@@ -1,0 +1,15 @@
+.con{
+    background-color: ghostwhite;
+}
+.profile{
+    display: flex;
+    justify-content: center;
+}
+img{
+    height: 200px;
+    border-radius: 50%;
+}
+.header{
+    display: flex;
+    justify-content: center;
+}
