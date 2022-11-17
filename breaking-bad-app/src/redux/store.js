@@ -4,6 +4,6 @@ import quotesSlice from "./quotesSlice"
 export const store = configureStore({
     reducer: {
         characters: characterSlice,
-        quotes:quotesSlice
+        quotes:quotesSlice,
     },
 })
