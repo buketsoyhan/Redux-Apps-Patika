@@ -13,15 +13,13 @@ function Products() {
                 <NumericFormat value={money} displayType='text' thousandSeparator={true} prefix={'$'} />
             </div>
 
-            <div >
+            <div className='products'>
                 <Grid templateColumns='repeat(3, 1fr)' gap={4}>
                     {products.map((item) => (
                         <GridItem key={item.id}>
                             <Card id={item.id} />
                         </GridItem>
-                    )
-                    )
-                    }
+                    ))}
                 </Grid>
             </div>
         </div>

@@ -9,7 +9,9 @@ function App() {
     <div className="App">
       <Navbar/>
       <Profile/>
-      <Products/>
+      <div className='products'>
+        <Products/>
+      </div>
       <Receipt/>
     </div>
   );

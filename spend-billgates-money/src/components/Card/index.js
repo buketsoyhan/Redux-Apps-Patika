@@ -9,12 +9,12 @@ function Card({ id }) {
 
     const products = useSelector((state) => state.products.items)
     const money = useSelector((state) => state.products.money)
-
     const item = products.find((tmp) => tmp.id === id);
 
     const [count, setCount] = useState(item.count);
-    const [isBuyable, setisBuyable] = useState(false);
-    const [isSellable, setisSellable] = useState(true);
+    const [isBuy, setisBuy] = useState(false);
+    const [isSell, setisSell] = useState(true);
+
     let maximumBuy = Math.floor(money / item.productPrice);
     let maximum = Number(count) + Number(maximumBuy);
 
@@ -26,10 +26,10 @@ function Card({ id }) {
 
     useEffect(() => {
         if (item.productPrice > money) {
-            setisBuyable(true);
+            setisBuy(true);
         }
         if (item.productPrice <= money) {
-            setisBuyable(false);
+            setisBuy(false);
         }
     }, [money]);
     const buy = () => {
@@ -40,10 +40,10 @@ function Card({ id }) {
     }
     const control = () => {
         if (count > 0) {
-            setisSellable(false);
+            setisSell(false);
         }
         if (count === 0) {
-            setisSellable(true);
+            setisSell(true);
         }
     }
     const handleChange = (value) => {
@@ -74,22 +74,22 @@ function Card({ id }) {
             </div>
             <Box className='sales' alignItems='center' m='auto' >
                 {
-                    !isSellable &&
+                    !isSell &&
                     <Button className='sale' style={{ backgroundColor: "red", color: "white" }} width='100px' height='40px' ms={4} onClick={() => sell()} >Sell</Button>
                 }
                 {
-                    isSellable &&
+                    isSell &&
                     <Button className='sale' width='100px' height='40px' ms={4} onClick={() => sell()} >Sell</Button>
 
                 }
                 <Input className='sale' type='number' textAlign='center' value={count} onChange={(e) => handleChange(e.target.value)} width='100px' height='35px' />
 
                 {
-                    !isBuyable &&
+                    !isBuy &&
                     <Button className='sale' style={{ backgroundColor: "green", color: "white" }} width='100px' height='40px' me={4} onClick={() => buy()}>Buy</Button>
                 }
                 {
-                    isBuyable &&
+                    isBuy &&
                     <Button className='sale' width='100px' height='40px' me={4} onClick={() => buy()}>Buy</Button>
                 }
             </Box>
