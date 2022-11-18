@@ -1,0 +1,15 @@
+.container{
+    width: 80%;
+}
+.sales{
+    display: flex;
+    justify-content: center;
+}
+.sale{
+    margin-inline: 5px ;
+    margin-bottom: 20px;
+}
+.product{
+    display: flex;
+    justify-content: center;
+}
