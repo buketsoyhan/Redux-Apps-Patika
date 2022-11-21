@@ -1,0 +1,65 @@
+.memoryGame {
+  max-width: 900px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.memoryCard {
+  position: relative;
+
+  background-color: #81b9cf;
+  margin: 5px;
+  width: 15%;
+  transform: scale(1);
+
+  transform-style: preserve-3d;
+  transition: all 0.5s ease;
+}
+
+.memoryCard:active {
+  transform: scale(0.97);
+  transition: transform 0.2s;
+}
+
+.front,
+.back {
+  backface-visibility: hidden;
+}
+
+.front {
+  transform: rotateY(180deg);
+}
+
+.back {
+  display: flex;
+  justify-content: center;
+}
+
+.memoryCard.active {
+  transform: rotateY(180deg);
+}
+
+.memoryCard.wrong {
+  background-color: red;
+}
+
+.memoryCard.correct {
+  background-color: green;
+}
+
+.disabled {
+  pointer-events: none;
+}
+
+@media only screen and (max-width: 800px) {
+  .back {
+    font-size: 12px;
+  }
+
+  .memoryCard img {
+    width: 100%;
+  }
+}

@@ -1,11 +1,13 @@
 import React from 'react'
 import "./style.css"
-import {useSelector, useDispatch} from "react-redux"
+import { useSelector, useDispatch } from "react-redux"
+import { newGame, resetScore } from "../../redux/memorySlice"
 function Header() {
-  const score = useSelector(state=>state.memory.score)
+  const score = useSelector(state => state.memory.score)
   const dispatch = useDispatch();
-  function handleGame(){
-//  to be filled
+  function handleGame() {
+    dispatch(newGame())
+    dispatch(resetScore())
   }
   return (
     <header>
