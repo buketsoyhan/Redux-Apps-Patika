@@ -1,0 +1,35 @@
+header {
+  width: 40%;
+  margin: auto;
+}
+
+h1 {
+  margin: 10px 0;
+  color: #000;
+  font-size: 36px;
+}
+
+.header-flex {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.header-score {
+  font-size: 20px;
+  margin-left: 1.5rem;
+}
+
+.btn {
+  border: none;
+  padding: 5px 10px;
+  cursor: pointer;
+  background-color: #44c5ba;
+  color: #fff;
+  font-family: "Silkscreen", cursive;
+  font-size: 18px;
+}
+
+.btn:active {
+  transform: scale(0.97);
+}
