@@ -1,0 +1,30 @@
+.header p {
+  color: rgb(131, 48, 48);
+  font-size: xx-large;
+}
+
+.form {
+  color: black;
+  margin: auto;
+  width: 70%;
+}
+.form-header {
+  display: flex;
+}
+p {
+  font-size: 22px;
+}
+.include {
+  margin-left: 3rem;
+}
+select {
+  background-color: white;
+  font-size: 25px;
+}
+.text {
+  font-size: 28px;
+}
+input {
+  background-color: white;
+  font-size: 20px;
+}
