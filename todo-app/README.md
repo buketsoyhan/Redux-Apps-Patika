@@ -34,6 +34,11 @@ Go to the folder with
 ```bash
 cd build
 ```
+Give permission with this command. 
+```bash
+set-ExecutionPolicy RemoteSigned -Scope CurrentUser
+```
+
 ```bash
 surge
 ```
