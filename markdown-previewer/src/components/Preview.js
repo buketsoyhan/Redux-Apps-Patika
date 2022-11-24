@@ -11,7 +11,7 @@ function Preview() {
         dispatch(writeText(value));
     };
 
-    const parsedText = marked(textCurrent, { sanitize: true });
+    const parsedText = marked(textCurrent || '');
     const processedText = { __html: parsedText };
 
     return (
