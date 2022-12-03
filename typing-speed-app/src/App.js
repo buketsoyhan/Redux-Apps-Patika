@@ -1,13 +1,14 @@
 import './App.css';
-import Timer from './components/Timer';
 import WordList from './components/Word/WordList';
 import FormComponent from "./components/Form/Form"
+import Footer from './components/Footer/Footer';
+
 function App() {
   return (
     <div className="App">
-      <Timer/>
       <WordList/>
       <FormComponent />
+      <Footer/>
     </div>
   );
 }
