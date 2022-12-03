@@ -1,3 +1,18 @@
+body{
+  background-color: #e2e1dd;
+  justify-content: center;
+  align-items: center;
+}
+*{
+  padding: 0;
+  margin: 0;
+}
 .App {
   text-align: center;
+  width: 100%;
+  max-width: 900px;
+  background-color: #b1afa9;
+  border-radius: 10px;
+  margin: 10px auto 0 auto;
+  padding: 10px;
 }
