@@ -1,5 +1,5 @@
 # Demo
-this project deployed on [Link] (https://typing-speed-app-bs.surge.sh/)
+This project deployed on [Link](https://typing-speed-app-bs.surge.sh/)
 
 # Getting Started with Create React App
 
